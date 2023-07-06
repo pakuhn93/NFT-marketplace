@@ -19,7 +19,8 @@ ItemTag.init({
     tag_id: {
         type: DataTypes.STRING
     },
-
+},
+{
     sequelize,
     freezeTableName: false,
     timestamps: false,
