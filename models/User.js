@@ -32,23 +32,23 @@ User.init({
     allowNull: false
   },
   // array of items that the user owns
-  item_id: {
-    type: DataTypes.JSON,
-    references: {
-      model: 'user',
-      key: 'id'
-    }
-  }
+  // item_id: {
+  //   type: DataTypes.JSON,
+  //   references: {
+  //     model: 'user',
+  //     key: 'id'
+  //   }
+  // }
 },
 {
   hooks: {
     beforeCreate: async (data) => {
-      data.password = await bcrypt.hash(data.password, 10)
-      return data
+      data.password = await bcrypt.hash(data.password, 10);
+      return data;
     },
     beforeUpdate: async (data) => {
-      data.password = await bcrypt.hash(data.password, 10)
-      return data
+      data.password = await bcrypt.hash(data.password, 10);
+      return data;
     }
   },
   sequelize,
