@@ -25,6 +25,19 @@ User.init({
     validate: {
       len: [6]
     }
+  },
+  // the currency our website uses and that the user will have
+  eldergold: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  // array of items that the user owns
+  item_id: {
+    type: DataTypes.JSON,
+    references: {
+      model: 'user',
+      key: 'id'
+    }
   }
 },
 {
