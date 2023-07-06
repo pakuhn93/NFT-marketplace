@@ -22,6 +22,7 @@ A way to accumulate currency
     Pawn shop for items?
 AI Images for items
 User can create own items? (after MVP, future feature)
+teddy bears
 
 ===== Endpoints (page urls) =====
 Homepage
