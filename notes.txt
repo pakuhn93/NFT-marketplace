@@ -23,6 +23,7 @@ A way to accumulate currency
 AI Images for items
 User can create own items? (after MVP, future feature)
 teddy bears
+Verify user input when they are creating an item and make "category_id" accept a text input (human input), rather than a number
 
 ===== Endpoints (page urls) =====
 Homepage
