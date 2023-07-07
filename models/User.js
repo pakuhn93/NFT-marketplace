@@ -29,7 +29,8 @@ User.init({
   // the currency our website uses and that the user will have
   eldergold: {
     type: DataTypes.INTEGER,
-    allowNull: false
+    allowNull: false,
+    defaultValue: 1000000
   },
   // array of items that the user owns
   // item_id: {
@@ -52,6 +53,7 @@ User.init({
     }
   },
   sequelize,
+  freezeTableName: true,
   timestamps: false,
   modelName: 'user'
 });
