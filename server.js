@@ -34,13 +34,14 @@ app.use(express.static(join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// need to comment these out if we're going to rebuild models
+// need to comment this out if we're going to rebuild models
 // then set sync to true
 // run it
+// stop server
 // then set to false and uncomment controllers
 // call jeff if things happen bad
 app.use(require('./controllers'));
 
-sequelize.sync({ force: false })
+sequelize.sync({ force: true })
   .then(() => app.listen(3001))
   .catch(err => console.error(err));
