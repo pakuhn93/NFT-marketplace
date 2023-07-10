@@ -33,13 +33,13 @@ User.init({
     defaultValue: 1000000
   },
   // array of items that the user owns
-  // item_id: {
-  //   type: DataTypes.JSON,
-  //   references: {
-  //     model: 'user',
-  //     key: 'id'
-  //   }
-  // }
+  item_id: {
+    type: DataTypes.JSON,
+    references: {
+      model: 'user',
+      key: 'id'
+    }
+  }
 },
 {
   hooks: {
