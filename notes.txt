@@ -40,3 +40,8 @@ Site
 
 ===== Other Notes =====
 1 eldergold is actually 1 billion usd
+
+
+===== Questions =====
+1. What session in express-session?
+2. What exactly is connect-session-sequelize again?
