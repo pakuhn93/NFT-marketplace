@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const User = require('../models/User');
+const Item = require('../models/Item');
 
 // the home endpoint
 router.get('/', async (req, res) => {
