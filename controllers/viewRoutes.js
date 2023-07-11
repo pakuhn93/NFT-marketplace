@@ -5,6 +5,23 @@ router.get('/', async (req, res) => {
   res.render('home')
 });
 
+router.get('/login', async (req, res) => {
+  res.render('login')
+});
+
+
+router.get("/owned", async (req, res) => {
+  res.render("owned");
+});
+
+router.get("/about", async (req, res) => {
+  res.render("about");
+});
+
+router.get("/signup", async (req, res) => {
+  res.render("signup");
+});
+
 // get users to use with handlebars?
 // router.get('/login', async (req, res) => {
 //   try {
