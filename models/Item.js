@@ -1,7 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config');
+const qr = require('qrcode');
 
-class Item extends Model {}
+class Item extends Model {
+    generateQR = (url) => {
+        this.item_image = url;
+    }
+}
 
 // our virtual items
 Item.init({
@@ -25,6 +30,9 @@ Item.init({
     stock: {
         type: DataTypes.INTEGER,
         allowNull: false
+    },
+    item_image: {
+        type: DataTypes.STRING
     },
     category_id: {
         type: DataTypes.INTEGER,
