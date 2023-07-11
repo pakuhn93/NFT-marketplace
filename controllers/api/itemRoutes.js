@@ -6,17 +6,18 @@ const { Item } = require('../../models');
 // get all items
 router.get('/', async (req, res) => {
     try {
-        const items = await Item.findAll();
-        res.status(200).json(items);
+        const itemData = await Item.findAll();
+        res.status(200).json(itemData);
     } catch (err){
         res.status(500).json(err);
     }
 });
 
+// get a single item
 router.get('/:id', async (req, res) => {
     try {
-        const item = await Item.findByPk(req.params.id);
-        res.status(200).json(item);
+        const itemData = await Item.findByPk(req.params.id);
+        res.status(200).json(itemData);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -35,20 +36,21 @@ router.post('/', async (req, res) => {
 // update item
 router.put('/:id', async (req, res) => {
     try {
-        const itemData = await User.update(req.body, {
+        const itemData = await Item.update(req.body, {
             where: {
                 id: req.params.id
             }
         });
-
+        console.log(itemData);
         // check if id exists
-        if(!userData[0]){
+        if(!itemData[0]){
             res.status(404).json({ message: 'No item with this id!' });
             return;
         }
-
         res.status(200).json(itemData);
+        
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
