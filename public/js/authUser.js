@@ -16,6 +16,7 @@ await fetch('/api/users/login', {
     document.location.replace('/')
 })
 
+// authenticate user
 document.getElementById('registerUser').addEventListener('click', async event => {
     const user = {
         username: document.getElementById('username').value,
