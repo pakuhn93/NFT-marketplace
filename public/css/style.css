@@ -12,3 +12,8 @@
 .navbar li a {
   text-decoration: none;
 }
+
+.logo {
+  float: left;
+  margin-right: 10px;
+}
