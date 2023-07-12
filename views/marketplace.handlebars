@@ -1,15 +1,24 @@
-<h2>Marketplace</h2>
+<div class="div-container">
+    <h2>Marketplace</h2>
     <hr>
-    {{#each items as |item|}}
-    <hr>
-    <div>
-        <h3 href="/item/{{item.id}}">{{item.item_name}}</h3>
-        <p>{{item.description}}</p>
-        <p>{{item.price}}</p>
-        <p>{{item.stock}}</p>
-        <p>{{item.category_id}}</p>
-    </div>
-    <hr>
-    {{/each}}
+    <table class="maketplace-container">
+        <tr>
+            <th>Item</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Category</th>
+        </tr>
+        {{#each items as |item|}}
+        <tr>
+            <td><button id="editPost" data-id="{{id}}">View</button></td>
+            <td>{{item.item_name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.stock}}</td>
+            <td>{{item.category_id}}</td>
+        </tr>
+        {{/each}}
+    </table>
 </div>
-
