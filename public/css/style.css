@@ -11,7 +11,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-color:dimgrey;
+  background-color:#696969;
   /*background-image: url("/images/ring-background.png.png"); */
 }
 
@@ -187,11 +187,44 @@ footer p {
 }
 
 .login-div-container a {
-  color: #333;
-  text-decoration: none;
+  color: #000000;
+  text-decoration:underline;
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 .login-div-container a:hover {
-  color: #666;
+  text-shadow: 2px 2px 4px rgba(196, 129, 208, 1);
+}
+
+
+.shadow-underline {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  color: #333;
+  text-decoration: none;
+  transition: box-shadow 0.3s, text-decoration 0.3s;
+}
+
+.shadow-underline::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.shadow-underline:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-underline:hover::before {
+  transform: scaleX(1);
 }
