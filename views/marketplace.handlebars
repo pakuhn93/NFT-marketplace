@@ -11,8 +11,8 @@
             <th>Stock</th>
             <th>Category</th>
         </tr>
+        {{#each items as |item|}}
         <tr>
-            {{#each items as |item|}}
             <td><button id="editPost" data-id="{{id}}">View</button></td>
             <td>{{item.item_name}}</td>
             <td>{{item.description}}</td>

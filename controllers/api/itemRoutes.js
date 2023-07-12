@@ -41,14 +41,14 @@ router.put('/:id', async (req, res) => {
                 id: req.params.id
             }
         });
-        console.log(itemData);
+
         // check if id exists
         if(!itemData[0]){
             res.status(404).json({ message: 'No item with this id!' });
             return;
         }
         res.status(200).json(itemData);
-        
+
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
