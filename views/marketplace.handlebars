@@ -10,16 +10,15 @@
             <th>Stock</th>
             <th>Category</th>
         </tr>
+        {{#each items as |item|}}
         <tr>
-            {{#each items as |item|}}
             <td><button id="editPost" data-id="{{id}}">View</button></td>
             <td>{{item.item_name}}</td>
             <td>{{item.description}}</td>
-            <td>{{item.tdrice}}</td>
+            <td>{{item.price}}</td>
             <td>{{item.stock}}</td>
             <td>{{item.category_id}}</td>
         </tr>
         {{/each}}
     </table>
-</div>
 </div>
