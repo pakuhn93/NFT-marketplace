@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config');
 
-class UserItemQuantity extends Model {}
+class UserItems extends Model {}
 
 // the tags that will be used to find items
-UserItemQuantity.init({
+UserItems.init({
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -14,12 +14,20 @@ UserItemQuantity.init({
     // keeps track of which user
     user_id: {
         type:DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+            model: 'user',
+            key: 'id'
+        }
     },
     // keeps track of which item (within the user)
     item_id: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+            model: 'item',
+            key: 'id'
+        }
     },
     item_quantity: {
         type: DataTypes.INTEGER,
@@ -30,7 +38,7 @@ UserItemQuantity.init({
     sequelize,
     freezeTableName: true,
     timestamps: false,
-    modelName: 'userItemQuantity'
+    modelName: 'userItems'
 });
 
-module.exports = UserItemQuantity;
+module.exports = UserItems;

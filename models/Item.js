@@ -41,6 +41,9 @@ Item.init({
     item_url: {
         type: DataTypes.STRING
     },
+    item_img: {
+        type: DataTypes.STRING,
+    },
     category_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
