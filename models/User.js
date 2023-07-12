@@ -32,15 +32,6 @@ User.init({
     allowNull: false,
     defaultValue: 1000000
   },
-  // array of items that the user owns
-  // initialize each user with some items, such as tattered shirt and ripped pants
-  /*item_id: {
-    type: DataTypes.JSON,
-    references: {
-      model: 'user',
-      key: 'id'
-    }
-  }*/
 },
 {
   hooks: {

@@ -7,6 +7,11 @@ class Item extends Model {
         this.item_url = url;
         const myQR = qr.create(url);
         console.log(`||| MY QR |||\n ${myQR}`);
+
+    }
+    // call this to display onto html
+    displayQR = () => {
+
     }
 }
 
@@ -35,6 +40,9 @@ Item.init({
     },
     item_url: {
         type: DataTypes.STRING
+    },
+    item_img: {
+        type: DataTypes.STRING,
     },
     category_id: {
         type: DataTypes.INTEGER,
