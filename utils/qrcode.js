@@ -1,1 +1,0 @@
-const qr = require('qrcode');

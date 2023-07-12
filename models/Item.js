@@ -4,7 +4,9 @@ const qr = require('qrcode');
 
 class Item extends Model {
     generateQR = (url) => {
-        this.item_image = url;
+        this.item_url = url;
+        const myQR = qr.create(url);
+        console.log(`||| MY QR |||\n ${myQR}`);
     }
 }
 
@@ -31,7 +33,7 @@ Item.init({
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    item_image: {
+    item_url: {
         type: DataTypes.STRING
     },
     category_id: {
