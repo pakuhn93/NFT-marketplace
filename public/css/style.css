@@ -282,7 +282,7 @@ footer p {
   border-bottom: 2px double #ccc; /* Apply double dashed border style to the bottom */
 }
 
-.maketplace-container button {
+.maketplace-container a {
   background-color: #2a2b2a;
   color: white;
   border: none;
@@ -294,7 +294,7 @@ footer p {
   text-decoration: none; /* Remove default underline */
 }
 
-.maketplace-container button::before {
+.maketplace-container a::before {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -306,11 +306,11 @@ footer p {
   transition: transform 0.3s ease; /* Add transition effect */
 }
 
-.maketplace-container button:hover::before {
+.maketplace-container a:hover::before {
   transform: scaleX(1); /* Show the underline on hover */
 }
 
-.maketplace-container button:hover {
+.maketplace-container a:hover {
   text-decoration: underline; /* Add underline on hover */
   box-shadow: 0 10px 10px rgba(218, 47, 183, 0.2); /* Add box shadow effect */
 }
@@ -382,4 +382,51 @@ footer p {
   color: white;
   overflow-wrap: break-word; 
   width: 80%;
+}
+
+/*  */
+
+ .items-table {
+width: 100%;
+        border-collapse: collapse;
+        background-color: #f5f5f5;
+        border: 10px solid #ddd;
+        border-radius: 25px;
+        margin: auto;
+}
+
+    .items-table th,
+    .items-table td {
+        padding: 5px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+
+    }
+
+    .items-table th {
+        background-color: #f9f9f9;
+        border-radius: 25px;
+
+}
+
+    .price {
+        font-weight: bold;
+    }
+
+    .table-wrapper {
+        padding: 20px; 
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+        display:inline-block;
+        text-align: center;
+}
+
+.div-items-container {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
