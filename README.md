@@ -48,7 +48,8 @@ QR-Code NPM-module to create QR-Codes for all unique items.
 
 Live Deployment through Heroku!
 
-Herokulink
+https://lit-hamlet-47263-654396d0d713.herokuapp.com/marketplace
+
 
     
 ## Authors
