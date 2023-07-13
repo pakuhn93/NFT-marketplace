@@ -18,7 +18,8 @@
             <td>{{item.description}}</td>
             <td>{{item.price}}</td>
             <td>{{item.stock}}</td>
-            <td>{{item.category_id}}</td>
+            {{!-- <td>{{item.category_id}}</td> --}}
+            <td><img src={{item.item_img}} alt={{item.item_name}} title={{item.item_name}} height="65px" class="pop-image"></td>    
         </tr>
         {{/each}}
     </table>
