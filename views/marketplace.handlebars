@@ -13,7 +13,7 @@
         </tr>
         {{#each items as |item|}}
         <tr>
-            <td><button id="{{item.item_name}}" >View</button></td>
+            <td><a href="/item/{{id}}">View</a></td>
             <td>{{item.item_name}}</td>
             <td>{{item.description}}</td>
             <td>{{item.price}}</td>
@@ -24,6 +24,6 @@
         {{/each}}
     </table>
 </div>
-<script src="/js/itemDetails.js"></script>
+{{!-- <script src="/js/itemDetails.js"></script> --}}
 
 

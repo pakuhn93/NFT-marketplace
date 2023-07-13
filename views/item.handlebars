@@ -1,13 +1,34 @@
-<div>
-    <h1>MY ITEM</h1>
-    <p>{{item.item_name}}</p>
-    <p>{{item.description}}</p>
-    <p>{{item.price}}</p>
-    <p>{{item.stock}}</p>
-
-    <hr>
-    <img src = {{item.item_img}} alt = {{item.item_name}} height = '150' width = '350'>
-    <hr>
-    <img src = {{item.item_QR}} alt = "{{item.name}} qr code"/>
+<div class="div-items-container">
+    <div class="table-wrapper">
+        <br>
+        <h2>Item Details</h2>
+        <hr>
+    <table class="items-table">
+    <tr>
+        <th>QR Code</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><img src="{{item.item_QR}}" alt="{{item.name}} QR code"></td>
+        <td rowspan="5"><img src={{item.item_img}} alt={{item.item_name}}></td>
+    </tr>
+    <tr>
+        <td>{{item.item_name}}</td>
+    </tr>
+    <tr>
+        <td>{{item.description}}</td>
+    </tr>
+    <tr>
+        <td>
+            <p class="price">Eldergold: {{item.price}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Items in Stock: {{item.stock}}</p>
+        </td>
+    </tr>
+</table>
 </div>
-<script src="/js/itemDetails.js"></script>
+</div>
+
