@@ -23,13 +23,25 @@ QR-Code NPM-module to create QR-Codes for all unique items.
 
 ## Usage
 
-1. Go to the login page. If you are a registered user, login, otherwise, click the "Sign Up Instead" button and you will be redirected to create a username and password.
+1. Go to the home page
+
+![home](public/images/home.png)
+
+2. If you are a registered user, login.
+
+![login](public/images/login.png)
+
+...otherwise, click the "Sign Up Instead" button and you will be redirected to create a username and password.
+
+![signup](public/images/signup.png)
 
 2. Next you can browse items available for sale on the Marketplace page. 
 
-3. Once you have selected items, you can pay for them using our currency: Eldergold.
+![marketpalce](public/images/marketplace.png)
 
-4. Purchased items will be stored on the Owned Items page.
+3. Once you have selected items, you can review the item image, item description, price (in Eldergold), QR code, and how many are in stock.
+
+![item](public/images/item.png)
 
 
 ## Installation
