@@ -3,15 +3,18 @@ const sequelize = require('../config');
 const qr = require('qrcode');
 
 class Item extends Model {
-    generateQR = (url) => {
-        this.item_url = url;
-        const myQR = qr.create(url);
-        console.log(`||| MY QR |||\n ${myQR}`);
+    // generates a QR code based on the url grabbed at 
+    generateQR = async (url) => {
+        const fileNameQR = `/images/item-qr-codes/${this.item_name.toLowerCase().replace(/ /g, '-')}.png`;
 
-    }
-    // call this to display onto html
-    displayQR = () => {
+        // create a .png file with this item's name as the file name
+        await qr.toFile(`${__dirname}/../public/${fileNameQR}`, url, { type: 'png' });
 
+        // set this item's item_QR property to be the path to its respective qr code
+        // only update this.item_QR if it's not equal to our current endpoint
+        if(this.item_QR != fileNameQR){
+            await this.update({item_QR: fileNameQR});
+        }
     }
 }
 
@@ -41,8 +44,11 @@ Item.init({
     item_url: {
         type: DataTypes.STRING
     },
+    item_QR: {
+        type: DataTypes.TEXT
+    },
     item_img: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING
     },
     category_id: {
         type: DataTypes.INTEGER,
