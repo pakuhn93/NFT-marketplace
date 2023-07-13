@@ -13,7 +13,7 @@
         </tr>
         {{#each items as |item|}}
         <tr>
-            <td><button id="editPost" data-id="{{id}}">View</button></td>
+            <td><button id="{{item.item_name}}" >View</button></td>
             <td>{{item.item_name}}</td>
             <td>{{item.description}}</td>
             <td>{{item.price}}</td>
@@ -24,4 +24,6 @@
         {{/each}}
     </table>
 </div>
+<script src="/js/itemDetails.js"></script>
+
 
