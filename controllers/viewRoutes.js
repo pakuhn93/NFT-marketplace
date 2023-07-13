@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', async (req, res) => {
-  res.render('login')
+  res.render('login');
 });
 
 
@@ -28,11 +28,12 @@ router.get("/signup", async (req, res) => {
 router.get('/item/:id', async(req, res) => {
   try {
     // grabbing the current url with the following variables:
-    const port = 3001 // DELETE THIS WHEN HOSTED ON HEROKU
-    const fullUrl = `${req.protocol}://${req.hostname}:${port}${req.originalUrl}`;
+    const port = ':3001' // DELETE THIS WHEN HOSTED ON HEROKU
+    const fullUrl = `${req.protocol}://${req.hostname}${port}${req.originalUrl}`;
+    
     // grabbing item data from our database
     let itemData = await Item.findByPk(req.params.id);
-    itemData.generateQR(fullUrl);
+    await itemData.generateQR(fullUrl);
     const item = itemData.get({ plain: true });
     res.render('item', {item} );
 
