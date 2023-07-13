@@ -28,7 +28,7 @@ router.get("/signup", async (req, res) => {
 router.get('/item/:id', async(req, res) => {
   try {
     // grabbing the current url with the following variables:
-    const port = ':3001' // DELETE THIS WHEN HOSTED ON HEROKU
+    const port = '' // :3001 DELETE THIS WHEN HOSTED ON HEROKU
     const fullUrl = `${req.protocol}://${req.hostname}${port}${req.originalUrl}`;
     
     // grabbing item data from our database
